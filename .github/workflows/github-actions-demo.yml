@@ -6,10 +6,9 @@ jobs:
     steps:
       - name: Check out repo
       - uses: actions/checkout@v4
-      - name: install bandit
+      - run: echo "file ${{ github.repository }}"
       - run: | 
           pip install bandit
-      - name: run the added file
       - run : |
           bandit -r $filename
       # - run: echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event."
